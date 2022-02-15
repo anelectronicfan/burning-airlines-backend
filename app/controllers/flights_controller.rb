@@ -1,7 +1,4 @@
 class FlightsController < ApplicationController
-
-    skip_before_action :verify_authenticity_token, raise: false
-
     def new
         @flight = Flight.new
     end
@@ -12,13 +9,6 @@ class FlightsController < ApplicationController
     end
 
     def index
-
-        flights = Flight.all
-        
-        flights.each do |flight| 
-            
-        end
-
         render json: Flight.all
     end
 
@@ -28,9 +18,11 @@ class FlightsController < ApplicationController
     end
 
     def edit
+        @flight =  Flight.find params[:id]       
     end
 
     def update
+        @flight =  Flight.find params[:id] 
     end
 
     def destroy
