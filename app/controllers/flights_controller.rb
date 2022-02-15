@@ -40,7 +40,8 @@ class FlightsController < ApplicationController
     end
 
     def index
-        
+        @flight =  Flight.all
+        render json: @flight
     end
 
     def show
@@ -61,7 +62,9 @@ class FlightsController < ApplicationController
         redirect_to flights_path
     end
 
+    private
+    
     def flight_params
-        params.require(:flight).permit(:name, :origin, :destination, :date, :airplane_id)
+        params.require(:flight).permit(:origin, :destination, :date, :airplane_id)
     end
 end

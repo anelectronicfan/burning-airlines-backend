@@ -1,5 +1,5 @@
 <div class="form_div">
-    <%= form_with model: @library, local: true, html: { multipart: true } do |f| %>
+    <%= form_with model: @flight, local: true do |f| %>
         <%= f.label :origin %>
         
         <%= f.text_field :origin %>
@@ -14,7 +14,7 @@
         
         <%= f.label :airplane_id %>
        
-        <%= f.text_field :airplane_id %>
+        <%= f.collection_select :airplane_id, Airplane.all, :id, :name %>
       
 
         
