@@ -10,6 +10,9 @@ resources :flights
 # get '/flights'           => 'flights#index', 
 # get '/flights/:id'       => 'flights#show', as: 'flight'
 # get '/flights/id/edit'   => 'flights#edit', as: 'edit_flight'
+
 resources :airplanes
+
+
 
 end
