@@ -16,19 +16,26 @@ class FlightsController < ApplicationController
 
 
     def index
+        #Grab all the flights that match the search, order them by earliest date then map into a new array
+        flights = Flight.order(:date).where(origin: params[:origin], destination: params[:destination]).map {|flight|
         
-        flights = Flight.where(origin: params[:origin], destination: params[:destination]).map {|flight|
-        new_flight = flight.attributes
+        updated_flight = flight.attributes #this makes a hash copy of the Flight so we can add to it
         
+        #grab the reservations and plane for the flight
         reservations = Reservation.where(flight_id: flight.id)
         plane = Airplane.find_by(id: flight.airplane_id)
-        
+        #calculate the remaining seats
         total_seats = plane.total_rows * plane.total_columns
         remaining_seats = total_seats - reservations.length
-        new_flight[:remaining_seats] = remaining_seats
-        new_flight[:plane_name] = plane.name
-        new_flight
+
+        #add the remaining seats and the name of the plane to the hash
+        updated_flight[:remaining_seats] = remaining_seats
+        updated_flight[:plane_name] = plane.name
+        
+        #return the hash to add into the flights array
+        updated_flight
         }
+
 
         render json: flights
     end
