@@ -13,6 +13,5 @@ resources :flights
 
 resources :airplanes
 
-
-
-end
+# AXIOS flight search form
+get '/search' => 'flights#search'
