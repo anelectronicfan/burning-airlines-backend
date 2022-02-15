@@ -1,4 +1,5 @@
 class FlightsController < ApplicationController
+
     def new
         @flight = Flight.new
     end
@@ -15,6 +16,9 @@ class FlightsController < ApplicationController
 
 
     def index
+        puts params
+        # TODO: make figure out how to get these params out!
+        # flights = Flight.where(origin: params[:origin], destination: params[:destination]).map {|flight|
         flights = Flight.all.map {|flight|
         f = flight.attributes
         
