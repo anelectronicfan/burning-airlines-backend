@@ -5,7 +5,14 @@ class FlightsController < ApplicationController
 
     def create
         @flight = Flight.new flight_params
+        @flight.save
 
+
+        if @flight.persisted?
+            redirect_to flights_path
+        else
+            render :new
+        end
     end
 
     def index
