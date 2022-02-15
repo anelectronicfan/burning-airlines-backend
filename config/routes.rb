@@ -5,7 +5,6 @@ resources :users
 resources :reservations
 
 resources :flights
-get '/flights' => 'flights#index'
 
 resources :airplanes
 
