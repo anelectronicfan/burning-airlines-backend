@@ -5,11 +5,18 @@ class AirplanesController < ApplicationController
     end
 
     def create
-        @airplane =Airplane.new airplane_params
+        
+        airplane =Airplane.new airplane_params
+        if airplane.persisted?
+        redirect_to airplanes_path
+        else
+            render :new
+        end
     end
 
     def index
-        @airplanes = Airplane.all
+        airplane = Airplane.all
+        render json: airplane
     end
 
     def show
@@ -25,7 +32,12 @@ class AirplanesController < ApplicationController
     end
 
     def destroy
+        Airplane.destroy params[:id]
+        redirect_to airplanes_path
     end
     
+    def airplane_params
+        params.require(:flight).permit(:name, :total_rows, :total_columns)
+    end
 
 end
