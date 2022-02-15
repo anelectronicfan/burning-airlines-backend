@@ -2157,3 +2157,180 @@ Processing by FlightsController#show as HTML
 Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/flights/new" for ::1 at 2022-02-15 21:49:20 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (61.7ms)
+  Rendered flights/new.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 498ms (Views: 496.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:50:26 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (10.8ms)
+  Rendered flights/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:50:54 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (8.6ms)
+  Rendered flights/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:54:36 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (55.6ms)
+  Rendered flights/new.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 154ms (Views: 147.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:55:48 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (127.9ms)
+  Rendered flights/new.html.erb within layouts/application (141.1ms)
+Completed 200 OK in 455ms (Views: 452.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:56:17 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (27.4ms)
+  Rendered flights/new.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 150ms (Views: 145.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:56:40 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (10.9ms)
+  Rendered flights/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 216ms (Views: 211.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:56:46 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (24.1ms)
+  Rendered flights/new.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 168ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:57:46 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (9.4ms)
+  Rendered flights/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 21:57:56 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (179.3ms)
+  Rendered flights/new.html.erb within layouts/application (205.8ms)
+Completed 200 OK in 581ms (Views: 577.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:02:32 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (6.7ms)
+  Rendered flights/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:03:32 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (13.0ms)
+  Rendered flights/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 143ms (Views: 139.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:03:39 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (119.9ms)
+  Rendered flights/new.html.erb within layouts/application (188.6ms)
+Completed 200 OK in 548ms (Views: 542.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:04:03 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (41.3ms)
+  Rendered flights/new.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 159ms (Views: 157.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:04:17 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (38.6ms)
+  Rendered flights/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 138ms (Views: 134.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:05:05 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (8.0ms)
+  Rendered flights/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:05:22 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (18.9ms)
+  Rendered flights/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 155ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:05:37 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (12.2ms)
+  Rendered flights/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 168ms (Views: 165.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights/new" for ::1 at 2022-02-15 22:05:48 +1100
+Processing by FlightsController#new as HTML
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/_form.html.erb (237.7ms)
+  Rendered flights/new.html.erb within layouts/application (241.0ms)
+Completed 200 OK in 734ms (Views: 730.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-02-15 22:15:14 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (32.9ms)
+  Rendered /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.8ms)
+  Rendered /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 90ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-02-15 22:15:40 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/welcome/index.html.erb (12.3ms)
+Completed 200 OK in 32ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-02-15 22:16:06 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (163.6ms)
+  Rendered /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (196.2ms)
+Completed 200 OK in 212ms (Views: 208.1ms | ActiveRecord: 0.0ms)
+
+
