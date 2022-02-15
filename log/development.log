@@ -2110,3 +2110,50 @@ Migrating to CreateReservations (20220215072912)
   [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 41]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" INNER JOIN "reservations" ON "flights"."id" = "reservations"."flight_id" WHERE "reservations"."user_id" = ?[0m  [["user_id", 41]]
+Started GET "/" for ::1 at 2022-02-15 21:33:05 +1100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/angelazhang/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6.2/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flights" for ::1 at 2022-02-15 21:33:30 +1100
+  
+SyntaxError (/Users/angelazhang/sei/projects/burning-airlines/burning-airlines-backend/app/controllers/flights_controller.rb:9: syntax error, unexpected '=', expecting `end'
+...Access-Control-Allow-Origin'] = '*'
+...                              ^
+):
+  
+app/controllers/flights_controller.rb:9: syntax error, unexpected '=', expecting `end'
+Started GET "/flights" for ::1 at 2022-02-15 21:33:49 +1100
+Processing by FlightsController#index as HTML
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:9
+Completed 200 OK in 37ms (Views: 19.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/flights/18" for ::1 at 2022-02-15 21:36:09 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:13
+Completed 200 OK in 26ms (Views: 0.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/flights" for ::1 at 2022-02-15 21:36:30 +1100
+Processing by FlightsController#index as HTML
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights/18" for ::1 at 2022-02-15 21:36:39 +1100
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:13
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
