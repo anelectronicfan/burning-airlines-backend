@@ -12,6 +12,13 @@ class FlightsController < ApplicationController
     end
 
     def index
+
+        flights = Flight.all
+        
+        flights.each do |flight| 
+            
+        end
+
         render json: Flight.all
     end
 
