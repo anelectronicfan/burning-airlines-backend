@@ -16,20 +16,18 @@ class FlightsController < ApplicationController
 
 
     def index
-        puts params
-        # TODO: make figure out how to get these params out!
-        # flights = Flight.where(origin: params[:origin], destination: params[:destination]).map {|flight|
-        flights = Flight.all.map {|flight|
-        f = flight.attributes
+        
+        flights = Flight.where(origin: params[:origin], destination: params[:destination]).map {|flight|
+        new_flight = flight.attributes
         
         reservations = Reservation.where(flight_id: flight.id)
         plane = Airplane.find_by(id: flight.airplane_id)
         
         total_seats = plane.total_rows * plane.total_columns
         remaining_seats = total_seats - reservations.length
-        f[:remaining_seats] = remaining_seats
-        f[:plane_name] = plane.name
-        f
+        new_flight[:remaining_seats] = remaining_seats
+        new_flight[:plane_name] = plane.name
+        new_flight
         }
 
         render json: flights
