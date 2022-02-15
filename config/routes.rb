@@ -12,4 +12,7 @@ resources :flights
 # get '/flights/id/edit'   => 'flights#edit', as: 'edit_flight'
 resources :airplanes
 
+# AXIOS flight search form
+get '/search' => 'flights#search'
+
 end

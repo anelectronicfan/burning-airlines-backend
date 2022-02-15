@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BurningAirlinesBackend</title>
+    <title>ZZY Airlines</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,19 @@
   </head>
 
   <body>
+  <div id="page-wrapper">
+    <header>
+      <h1>ZZY Airlines</h1>
+      <nav>
+        <%= link_to 'Airplanes', new_airplane_path %>
+        <%= link_to 'Flights', flights_path %>
+        
+      </nav>
+    </header>
+    
     <%= yield %>
+  </div>
   </body>
+
+
 </html>
