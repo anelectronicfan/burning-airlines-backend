@@ -1,21 +1,6 @@
 class FlightsController < ApplicationController
 
-    def new
-        @flight = Flight.new
-    end
-
-    def create
-        @flight = Flight.new flight_params
-        @flight.save
-        if @flight.persisted?
-            redirect_to flights_path
-        else
-            render :new
-        end
-    end
-
-
-    def index
+    def search
         #Grab all the flights that match the search, order them by earliest date then map into a new array
         flights = Flight.order(:date).where(origin: params[:origin], destination: params[:destination]).map {|flight|
         
@@ -38,6 +23,24 @@ class FlightsController < ApplicationController
 
 
         render json: flights
+    end
+
+    def new
+        @flight = Flight.new
+    end
+
+    def create
+        @flight = Flight.new flight_params
+        @flight.save
+        if @flight.persisted?
+            redirect_to flights_path
+        else
+            render :new
+        end
+    end
+
+    def index
+        
     end
 
     def show
