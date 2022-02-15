@@ -12,14 +12,20 @@ class FlightsController < ApplicationController
     end
 
     def index
-
-        flights = Flight.all
+        flights = Flight.all.map {|flight|
+        f = flight.attributes
         
-        flights.each do |flight| 
-            
-        end
+        reservations = Reservation.where(flight_id: flight.id)
+        plane = Airplane.find_by(id: flight.airplane_id)
+        
+        total_seats = plane.total_rows * plane.total_columns
+        remaining_seats = total_seats - reservations.length
+        f[:remaining_seats] = remaining_seats
+        f[:plane_name] = plane.name
+        f
+        }
 
-        render json: Flight.all
+        render json: flights
     end
 
     def show
