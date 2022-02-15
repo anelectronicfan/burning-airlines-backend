@@ -64,6 +64,18 @@ f3 = Flight.create(
     date: "2022/03/23", 
     airplane_id: a3.id
 )
+f4 = Flight.create(
+    origin: "SYD", 
+    destination: "LHR", 
+    date: "2022/03/24", 
+    airplane_id: a3.id
+)
+f5 = Flight.create(
+    origin: "SYD", 
+    destination: "LHR", 
+    date: "2022/03/25", 
+    airplane_id: a3.id
+)
 
 puts " created #{Flight.count} flights"
 # puts "flight #{f1.airplane.name} has "
