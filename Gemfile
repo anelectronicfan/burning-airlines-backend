@@ -54,3 +54,6 @@ gem 'pry-rails'
 
 gem 'rack-cors'
 
+gem 'airports', '~> 1.7.0'
+
+
