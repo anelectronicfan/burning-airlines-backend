@@ -1,18 +1,14 @@
 <h1> Flights index </h1>
 
-<div class="flightID">
-    <ul>
-        <% @flights.each do |flight| %>
-        <li>
-        <%= link_to (flight.id), flight_path(flight.id) %> 
-        </li>
-        <% end %>
+<%= render partial: 'form' %>
 
-    </ul>
 
-</div>
-<div class="flightDates">
+
+
+<div class="flightIndex">
+    <p>Current Flight Index</p>
     <ul>
+        <p class="sectionTitle">Date</p>
         <% @flights.each do |flight| %>
         <li>
         <%= flight.date %> 
@@ -20,4 +16,33 @@
         <% end %>
 
     </ul>
+    <ul>
+        <p class="sectionTitle">Flight</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= link_to (flight.id), flight_path(flight.id) %> 
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">From > To</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.origin %> > <%= flight.destination %>
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Plane</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.airplane_id %>
+        </li>
+        <% end %>
+
+    </ul>
+
 </div>
+
