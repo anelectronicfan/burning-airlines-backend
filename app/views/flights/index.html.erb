@@ -50,7 +50,14 @@
         <%= (flight.airplane.total_columns * flight.airplane.total_rows) - flight.reservations.length %> 
         </li>
         <% end %>
-
+    </ul>
+    <ul>
+        
+        <% @flights.each do |flight| %>
+        <li>
+        <%= link_to 'Delete', destroy_flight_path(flight.id) , class: "delete-button"%>
+        </li>
+        <% end %>
     </ul>
 
 </div>

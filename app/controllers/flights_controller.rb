@@ -1,5 +1,6 @@
 class FlightsController < ApplicationController
 
+    
     def search
         #Grab all the flights that match the search, order them by earliest date then map into a new array
         flights = Flight.order(:date).where(origin: params[:origin], destination: params[:destination]).map {|flight|
@@ -42,6 +43,7 @@ class FlightsController < ApplicationController
     end
 
     def index
+
         @flight = Flight.new
         @flights =  Flight.all.reverse
     end
