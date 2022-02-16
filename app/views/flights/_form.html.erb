@@ -1,4 +1,15 @@
 <div class="form_div">
+    <%  if @flight.errors.any? %>
+        <ul>
+        <% @flight.errors.full_messages.each do |e|%>
+            <li class="error-message">
+            <%= e %>
+            </li>
+        <% end %>
+        </ul>
+    <% end%>
+
+
     <%= form_with model: @flight, local: true do |f| %>
         <%= f.label :origin %>
         

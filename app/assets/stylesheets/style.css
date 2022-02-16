@@ -26,3 +26,10 @@
     text-decoration: underline;
     margin: 0px 0px 10px 0px;
 }
+
+
+.error-message{
+    font-size: 10px;
+    color: red;
+    border: 1px solid red;
+}

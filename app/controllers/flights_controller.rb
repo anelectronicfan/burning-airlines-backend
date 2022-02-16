@@ -31,11 +31,13 @@ class FlightsController < ApplicationController
 
     def create
         @flight = Flight.new flight_params
+        @flights =  Flight.all.reverse
+
         @flight.save
         if @flight.persisted?
             redirect_to flights_path
         else
-            render :new
+            render :index
         end
     end
 
