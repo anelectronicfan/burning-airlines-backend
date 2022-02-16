@@ -20,7 +20,7 @@
         <p class="sectionTitle">Flight</p>
         <% @flights.each do |flight| %>
         <li>
-        <%= link_to (flight.id), flight_path(flight.id) %> 
+        <%= link_to (flight.id), edit_flight_path(flight.id) %> 
         </li>
         <% end %>
 

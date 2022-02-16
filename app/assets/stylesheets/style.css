@@ -1,3 +1,4 @@
+
 #page-wrapper{
     width: 80vw;
     margin: 0 auto;
@@ -15,6 +16,12 @@
 .form_div input{
     display:block;
     margin: 0px 0px 10px 0px;
+}
+
+.form_div ul{
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
 }
 
 .plane-seating-container{
@@ -78,4 +85,8 @@
     font-size: 10px;
     color: red;
     border: 1px solid red;
+}
+
+.field_with_errors label{
+    color: red;
 }
