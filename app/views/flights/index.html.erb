@@ -38,7 +38,7 @@
         <p class="sectionTitle">Plane</p>
         <% @flights.each do |flight| %>
         <li>
-        <%= flight.airplane_id %>
+        <%= flight.airplane.name %>
         </li>
         <% end %>
 

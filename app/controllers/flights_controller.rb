@@ -40,7 +40,8 @@ class FlightsController < ApplicationController
     end
 
     def index
-        @flights =  Flight.all
+        @flight = Flight.new
+        @flights =  Flight.all.reverse
     end
 
     def show
