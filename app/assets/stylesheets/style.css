@@ -5,11 +5,13 @@
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
+.logo-airlines{
+    font-size: 38px;
+}
 header{
     display: flex;
     align-items: center;
     width: 80vw;
-   
 }
 nav{
     
@@ -24,7 +26,14 @@ nav{
     background-color: red;
     padding:5px;
     color:white;
+    font-size: 15px;
 }
+
+.page-title{
+    font-size: 28px;
+    margin: 30px;
+}
+
 .new-plane-form-container{ 
     border: 1px solid red;
 }
@@ -41,7 +50,8 @@ nav{
 
 .form_div label{
     display:block;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 3px 0px;
+    font-size: 15px;
 }
 
 .form_div ul{
