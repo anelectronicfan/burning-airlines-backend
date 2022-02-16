@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
  
-    resources :users
+  resources :users
 
-    resources :reservations
+  resources :reservations
 
-    resources :flights
-    get '/flights/:id/delete' => 'flights#destroy',as: 'destroy_flight'
+  resources :flights
+  get '/flights/:id/delete' => 'flights#destroy',as: 'destroy_flight'
 
-    resources :airplanes
+  resources :airplanes
 
-    # AXIOS flight search form
-    get '/search' => 'flights#search'
+  # AXIOS flight search form
+  get '/search' => 'flights#search'
 
 end
