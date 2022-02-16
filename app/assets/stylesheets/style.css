@@ -53,9 +53,6 @@ nav{
     margin: 30px;
 }
 
-.new-plane-form-container{ 
-    border: 2px solid red;
-}
 
 form{
     background-color: red;
@@ -92,6 +89,22 @@ form{
     width: 150px;
 }
 
+.new-plane-form-container{ 
+    border: 2px solid red;
+}
+
+.plane-container{
+    border: 2px solid red;
+    width: 80vw;
+    margin-bottom: 10px;
+    
+}
+.plane-details-container{
+    background-color: red;
+    display: table-cell;
+    text-align: left;
+    padding:10px;
+}
 
 .plane-seating-container{
     font-size: 0.5rem;
@@ -100,7 +113,7 @@ form{
     flex-direction: column;
     width: fit-content;
     gap: 1em;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10rem 1rem 5rem;
     border-radius: 5rem;
     border-top-left-radius: 50% 10rem;
@@ -108,11 +121,6 @@ form{
     
 }
 
-.plane-container{
-    border: 1px solid blue;
-    margin: 1rem;
-
-}
 
 .plane-seating-row{
     border: 1px solid blue;

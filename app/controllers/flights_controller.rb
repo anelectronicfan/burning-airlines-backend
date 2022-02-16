@@ -33,6 +33,8 @@ class FlightsController < ApplicationController
     def create
         @flight = Flight.new flight_params
         @flights =  Flight.all.reverse
+        @flight[:origin]= flight_params[:origin].upcase
+        @flight[:destination]= flight_params[:destination].upcase
 
         @flight.save
         if @flight.persisted? # If changes are saved correctly update the flight index
@@ -102,5 +104,6 @@ class FlightsController < ApplicationController
     
     def flight_params
         params.require(:flight).permit(:origin, :destination, :date, :airplane_id)
+
     end
 end
