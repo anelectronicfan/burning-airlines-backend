@@ -1,12 +1,12 @@
-<h1> Flights index </h1>
-
-<%= render partial: 'form' %>
-
-
-
+<h3> Flights index </h3>
 
 <div class="flightIndex">
-    <p>Current Flight Index</p>
+    <p>Add New Flight</p>
+    <%= render partial: 'form' %>
+</div>
+
+<div class="flightIndex">
+    <p>All Flights</p>
     <ul>
         <p class="sectionTitle">Date</p>
         <% @flights.each do |flight| %>
@@ -39,6 +39,15 @@
         <% @flights.each do |flight| %>
         <li>
         <%= flight.airplane.name %>
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Seats</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= (flight.airplane.total_columns * flight.airplane.total_rows) - flight.reservations.length %> 
         </li>
         <% end %>
 
