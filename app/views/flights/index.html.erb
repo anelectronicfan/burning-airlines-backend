@@ -1,0 +1,23 @@
+<h1> Flights index </h1>
+
+<div class="flightID">
+    <ul>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= link_to (flight.id), flight_path(flight.id) %> 
+        </li>
+        <% end %>
+
+    </ul>
+
+</div>
+<div class="flightDates">
+    <ul>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.date %> 
+        </li>
+        <% end %>
+
+    </ul>
+</div>
