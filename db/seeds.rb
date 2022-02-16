@@ -107,6 +107,12 @@ r4 = Reservation.create(
     flight_id: f3.id, 
     user_id: u1.id
 )
+r5 = Reservation.create(
+    seat_row: 7,
+    seat_column: 2, 
+    flight_id: f2.id, 
+    user_id: u1.id
+)
 
 puts " created #{Reservation.count}"
 puts " Reservation #{r1.id} belongs to #{Reservation.first.user.name} "
