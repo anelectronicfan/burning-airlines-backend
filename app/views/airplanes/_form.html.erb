@@ -1,17 +1,26 @@
 
 <div class="form_div">
+    <%  if @airplane.errors.any? %>
+    <ul>
+      <% @airplane.errors.full_messages.each do |e|%>
+        <li class="error-message">
+          <%= e %>
+        </li>
+      <% end %>
+    </ul>
+  <% end%>
     <%= form_with model: @airplane, local: true do |f| %>
         <%= f.label :name %>
         
         <%= f.text_field :name %>
         
-        <%= f.label :total_rows %>
+        <%= f.label :total_rows, 'Rows'%>
 
-        <%= f.text_field :total_rows %>
+        <%= f.number_field :total_rows, value: 10, min: 1, max: 100 %>
         
-        <%= f.label :total_columns %>
+        <%= f.label :total_columns, 'Columns' %>
         
-        <%= f.text_field :total_columns %>
+        <%= f.number_field :total_columns, value: 6, min: 1, max: 20 %>
         
 
         <%= f.submit %>

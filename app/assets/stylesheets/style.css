@@ -3,6 +3,14 @@
     margin: 0 auto;
     text-align: center;
 }
+.new-plane-form-container{ 
+    border: 1px solid red;
+}
+.form_div{
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+}
 
 .form_div input{
     display:block;
@@ -22,6 +30,12 @@
     border-top-left-radius: 50% 10rem;
     border-top-right-radius: 50% 10rem;
     
+}
+
+.plane-container{
+    border: 1px solid blue;
+    margin: 1rem;
+
 }
 
 .plane-seating-row{

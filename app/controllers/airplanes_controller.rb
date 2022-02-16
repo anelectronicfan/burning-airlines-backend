@@ -7,16 +7,18 @@ class AirplanesController < ApplicationController
     def create
         
         @airplane = Airplane.new airplane_params
+        @airplanes = Airplane.order(:date).reverse
         
         @airplane.save
         if @airplane.persisted?
         redirect_to airplanes_path
         else
-            render :new
+            render :index
         end
     end
 
     def index
+        @airplane = Airplane.new
         @airplanes = Airplane.order(:date).reverse
     end
 
