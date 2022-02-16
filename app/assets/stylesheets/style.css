@@ -32,6 +32,7 @@ nav{
 }
 
 
+
 .nav-button{
     text-decoration: none;
     width: 70px;
@@ -48,6 +49,27 @@ nav{
     color: red;
 }
 
+.back-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    margin-left: auto;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    height: 15px;
+    background-color: red;
+    padding:5px;
+    color:white;
+    font-size: 15px;
+    transition: 0.25s;
+}
+.back-button:hover{
+    outline: 1.5px solid red;
+    background-color: white;
+    color: red;
+}
 .page-title{
     font-size: 28px;
     margin: 30px;
@@ -104,6 +126,7 @@ form{
     display: table-cell;
     text-align: left;
     padding:10px;
+    position:absolute;
 }
 
 .plane-seating-container{
