@@ -20,6 +20,7 @@ class ReservationsController < ApplicationController
     end
 
     def index
+        
     end
 
     def show

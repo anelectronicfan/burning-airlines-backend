@@ -58,7 +58,7 @@ class FlightsController < ApplicationController
         airplane = Airplane.find_by(id: flight.airplane_id)  
 
         # Grab the current user(for now, it's hard coded to be User.first)
-        user = User.first
+        user_1 = User.first
 
         # Grab all associated reservations
         reservations_array = Reservation.where(flight_id: flight.id)  # This is an array of reservation objects
@@ -79,7 +79,7 @@ class FlightsController < ApplicationController
             flight: flight,
             airplane: airplane,
             reservations: @reservations,
-            user: user
+            user: user_1
         }
 
 
