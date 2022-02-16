@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     def show
         user = User.find params[:id]
         reservations= user.reservations
+
+        reservations_data ={
+            
+        }
         render json: reservations
     end
 
