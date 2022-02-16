@@ -1,5 +1,6 @@
 class FlightsController < ApplicationController
 
+    
     def search
         #Grab all the flights that match the search, order them by earliest date then map into a new array
         flights = Flight.order(:date).where(origin: params[:origin], destination: params[:destination]).map {|flight|
@@ -31,16 +32,22 @@ class FlightsController < ApplicationController
 
     def create
         @flight = Flight.new flight_params
+        @flights =  Flight.all.reverse
+        @flight[:origin]= flight_params[:origin].upcase
+        @flight[:destination]= flight_params[:destination].upcase
+
         @flight.save
-        if @flight.persisted?
+        if @flight.persisted? # If changes are saved correctly update the flight index
             redirect_to flights_path
         else
-            render :new
+            render :index # render the index showing the error messages
         end
     end
 
     def index
-        
+
+        @flight = Flight.new
+        @flights =  Flight.all.reverse
     end
 
     def show
@@ -80,7 +87,8 @@ class FlightsController < ApplicationController
     end
 
     def edit
-        @flight =  Flight.find params[:id]       
+        @flight =  Flight.find params[:id] 
+            
     end
 
     def update
@@ -92,7 +100,10 @@ class FlightsController < ApplicationController
         redirect_to flights_path
     end
 
+    private
+    
     def flight_params
-        params.require(:flight).permit(:name, :origin, :destination, :date, :airplane_id)
+        params.require(:flight).permit(:origin, :destination, :date, :airplane_id)
+
     end
 end

@@ -1,9 +1,188 @@
+:root{
+    box-sizing: border-box;
+}
+footer{
+    background-color: red;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 #page-wrapper{
     width: 80vw;
     margin: 0 auto;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.logo-airlines{
+    font-size: 38px;
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+}
+nav{
+    
+    margin-left: auto;
 }
 
-.form_div input{
+
+.nav-button{
+    text-decoration: none;
+    width: 70px;
+    height: 20px;
+    background-color: red;
+    padding:5px;
+    color:white;
+    font-size: 15px;
+    transition: 0.25s;
+}
+.nav-button:hover{
+    outline: 1.5px solid red;
+    background-color: white;
+    color: red;
+}
+
+.page-title{
+    font-size: 28px;
+    margin: 30px;
+}
+
+
+form{
+    background-color: red;
+    width: 80vw;
+    text-align:center;
+}
+
+.form_div{
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.form-input-container{
+    border: 2px solid red;
+    display:inline-block
+}
+
+.form_div label{
     display:block;
+    margin: 10px 0px 3px 0px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.form_div ul{
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.input-box{
+    height: 20px;
+    width: 150px;
+}
+
+.new-plane-form-container{ 
+    border: 2px solid red;
+}
+
+.plane-container{
+    border: 2px solid red;
+    width: 80vw;
+    margin-bottom: 10px;
+    
+}
+.plane-details-container{
+    background-color: red;
+    display: table-cell;
+    text-align: left;
+    padding:10px;
+}
+
+.plane-seating-container{
+    font-size: 0.5rem;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1em;
+    margin: 20px auto;
+    padding: 10rem 1rem 5rem;
+    border-radius: 5rem;
+    border-top-left-radius: 50% 10rem;
+    border-top-right-radius: 50% 10rem;
+    
+}
+
+
+.plane-seating-row{
+    border: 1px solid blue;
+    display: flex;
+    gap: 0.5em;
+}
+
+.plane-seating-seat{
+    border: 1px solid green;
+    width: 3em;
+    padding: 1em 0;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.flightIndex{
+    border: 2px solid red; 
+}
+
+.flightIndex p{
+    line-height: 10px;
+}
+.flightIndex li{
+    margin: 5px;
+}
+
+.flightIndex ul{
+   
+    display: inline-block;
+    padding:5px;
+    list-style-type: none;
+}
+
+
+.sectionTitle{
+    text-decoration: underline;
     margin: 0px 0px 10px 0px;
+}
+.delete-button{
+    font-size: 15px;
+    text-decoration: none;
+    background-color: red;
+    padding: 2px;
+    margin:2px;
+    color:white;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.delete-button:hover{
+    outline: 1.5px solid red;
+    background-color: white;
+    color: red;
+}
+
+.error-message{
+
+    font-size: 10px;
+    color: red;
+   text-align: center;
+}
+
+.field_with_errors label{
+    color: red;
 }

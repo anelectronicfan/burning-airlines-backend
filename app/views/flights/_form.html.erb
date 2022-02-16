@@ -1,23 +1,43 @@
-<div class="form_div">
-    <%= form_with model: @library, local: true, html: { multipart: true } do |f| %>
-        <%= f.label :origin %>
-        
-        <%= f.text_field :origin %>
-        
-        <%= f.label :destination %>
-       
-        <%= f.text_field :destination %>
-        
-        <%= f.label :date %>
-        
-        <%= f.date_field :date %>
-        
-        <%= f.label :airplane_id %>
-       
-        <%= f.text_field :airplane_id %>
-      
 
+
+<div class="form_div">
+    <%  if @flight.errors.any? %>
+        <ul>
+        <% @flight.errors.full_messages.each do |e|%>
+            <li class="error-message">
+            <%= e %>
+            </li>
+        <% end %>
+        </ul>
+    <% end%>
+
+
+    <%= form_with model: @flight, local: true do |f| %>
         
-        <%= f.submit %>
+        <div class="form-input-container">
+            <%= f.label :origin %>
+            
+            <%= f.text_field :origin, placeholder: "Enter Origin", class:"input-box" %>
+        </div>
+            
+        <div class="form-input-container">
+            <%= f.label :destination %>
+        
+            <%= f.text_field :destination, placeholder: "Enter Destination", class:"input-box" %>
+        </div>
+        
+        <div class="form-input-container">
+            <%= f.label :date %>
+            
+            <%= f.date_field :date, {class:"input-box"} %>
+        </div>
+            
+        <div class="form-input-container">
+            <%= f.label :airplane_id %>
+        
+            <%= f.collection_select :airplane_id, Airplane.all, :id, :name, {prompt: "Select Plane"}, {class:"input-box"}%>
+        </div>
+
+        <%= f.submit class:"button" %>
     <% end %>
 </div>

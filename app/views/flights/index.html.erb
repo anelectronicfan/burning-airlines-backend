@@ -1,0 +1,64 @@
+<h3 class="page-title"> Flights Index </h3>
+
+<div class="flightIndex">
+    <p>Add New Flight</p>
+</div>
+    <%= render partial: 'form' %>
+
+<div class="flightIndex">
+    <p>All Flights</p>
+    <ul>
+        <p class="sectionTitle">Date</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.date %> 
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Flight</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= link_to (flight.id), edit_flight_path(flight.id) %> 
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">From > To</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.origin %> > <%= flight.destination %>
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Plane</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.airplane.name %>
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Seats</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= (flight.airplane.total_columns * flight.airplane.total_rows) - flight.reservations.length %> 
+        </li>
+        <% end %>
+    </ul>
+    <ul>
+        
+        <% @flights.each do |flight| %>
+        <li>
+        <%= link_to 'Delete', destroy_flight_path(flight.id) , class: "delete-button"%>
+        </li>
+        <% end %>
+    </ul>
+
+</div>
+

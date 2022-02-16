@@ -6,17 +6,21 @@ class AirplanesController < ApplicationController
 
     def create
         
-        airplane =Airplane.new airplane_params
-        if airplane.persisted?
+        @airplane = Airplane.new airplane_params
+        @airplanes = Airplane.order(:date).reverse
+        
+        @airplane.save
+        if @airplane.persisted?
         redirect_to airplanes_path
         else
-            render :new
+            render :index
         end
     end
 
     def index
-        airplane = Airplane.all
-        render json: airplane
+        @airplane = Airplane.new
+        @airplanes = Airplane.order(:date).reverse
+    
     end
 
     def show
@@ -36,8 +40,10 @@ class AirplanesController < ApplicationController
         redirect_to airplanes_path
     end
     
+    private
+
     def airplane_params
-        params.require(:flight).permit(:name, :total_rows, :total_columns)
+        params.require(:airplane).permit(:name, :total_rows, :total_columns)
     end
 
 end
