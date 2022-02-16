@@ -1,3 +1,4 @@
+
 #page-wrapper{
     width: 80vw;
     margin: 0 auto;
@@ -41,6 +42,12 @@ nav{
 .form_div label{
     display:block;
     margin: 10px 0px 0px 0px;
+}
+
+.form_div ul{
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
 }
 
 .input-box{
@@ -125,4 +132,8 @@ form{
     font-size: 10px;
     color: red;
     border: 1px solid red;
+}
+
+.field_with_errors label{
+    color: red;
 }
