@@ -7,20 +7,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Raleway&display=swap" rel="stylesheet">
   </head>
 
   <body>
   <div id="page-wrapper">
     <header>
-      <h1>ZZY Airlines</h1>
+      <h1 class="logo-airlines">ZZY Airlines</h1>
       <nav>
-        <%= link_to 'Airplanes', airplanes_path %>
-        <%= link_to 'Flights Index', flights_path %>
+        <%= link_to 'Airplanes', airplanes_path , class:"nav-button"%>
+        <%= link_to 'Flights Index', flights_path , class:"nav-button" %>
       </nav>
     </header>
     
     <%= yield %>
   </div>
+
+
+  <footer>
+  &copy; ZZY AIRLINES
+  </footer>
   </body>
 
 

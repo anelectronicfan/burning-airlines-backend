@@ -10,18 +10,21 @@
     </ul>
   <% end%>
     <%= form_with model: @airplane, local: true do |f| %>
-        <%= f.label :name %>
-        
-        <%= f.text_field :name %>
-        
-        <%= f.label :total_rows, 'Rows'%>
+        <div class="form-input-container">
+          <%= f.label :name %>
+          
+          <%= f.text_field :name, placeholder: "Plane Name", class:"input-box" %>
+        </div>
+        <div class="form-input-container">
+          <%= f.label :total_rows, 'Rows'%>
 
-        <%= f.number_field :total_rows, value: 10, min: 1, max: 100 %>
-        
-        <%= f.label :total_columns, 'Columns' %>
-        
-        <%= f.number_field :total_columns, value: 6, min: 1, max: 20 %>
-        
+          <%= f.number_field :total_rows, value: 10, min: 1, max: 100, placeholder: "Plane Name", class:"input-box" %>
+        </div>
+        <div class="form-input-container">
+          <%= f.label :total_columns, 'Columns' %>
+          
+          <%= f.number_field :total_columns, value: 6, min: 1, max: 20, placeholder: "Plane Name", class:"input-box" %>
+        </div>
 
         <%= f.submit %>
     <% end %>
