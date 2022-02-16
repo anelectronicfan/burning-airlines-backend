@@ -20,7 +20,7 @@
         <p class="sectionTitle">Flight</p>
         <% @flights.each do |flight| %>
         <li>
-        <%= link_to (flight.id), flight_path(flight.id) %> 
+        <%= link_to (flight.id), edit_flight_path(flight.id) %> 
         </li>
         <% end %>
 
@@ -39,6 +39,15 @@
         <% @flights.each do |flight| %>
         <li>
         <%= flight.airplane.name %>
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Seats</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= (flight.airplane.total_columns * flight.airplane.total_rows) - flight.reservations.length %> 
         </li>
         <% end %>
 

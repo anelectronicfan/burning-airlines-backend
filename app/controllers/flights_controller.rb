@@ -83,7 +83,8 @@ class FlightsController < ApplicationController
     end
 
     def edit
-        @flight =  Flight.find params[:id]       
+        @flight =  Flight.find params[:id] 
+            
     end
 
     def update
