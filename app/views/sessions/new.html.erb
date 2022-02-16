@@ -1,0 +1,21 @@
+<div id="login-page-wrapper">
+  <h1>Login</h1>
+  <% if flash[:error] %>
+      <h3 class="error-message"><%= flash[:error] %></h3>
+  <% end %>
+  <%= form_with url: login_path, local: true do |f| %>
+    <div>
+      <%= f.label :email %>
+    </div>
+    <div>
+      <%= f.text_field :email %>
+    </div>
+    <div>
+      <%= f.label :password %>
+    </div>
+    <div>
+      <%= f.password_field :password %>
+    </div>
+    <%= f.submit 'Login' %>
+  <% end %>
+</div>
