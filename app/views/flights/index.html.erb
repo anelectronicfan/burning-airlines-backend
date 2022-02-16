@@ -1,0 +1,48 @@
+<h1> Flights index </h1>
+
+<%= render partial: 'form' %>
+
+
+
+
+<div class="flightIndex">
+    <p>Current Flight Index</p>
+    <ul>
+        <p class="sectionTitle">Date</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.date %> 
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Flight</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= link_to (flight.id), flight_path(flight.id) %> 
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">From > To</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.origin %> > <%= flight.destination %>
+        </li>
+        <% end %>
+
+    </ul>
+    <ul>
+        <p class="sectionTitle">Plane</p>
+        <% @flights.each do |flight| %>
+        <li>
+        <%= flight.airplane.name %>
+        </li>
+        <% end %>
+
+    </ul>
+
+</div>
+

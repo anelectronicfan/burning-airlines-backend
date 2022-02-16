@@ -51,3 +51,31 @@
     text-align: center;
     border-radius: 1em;
 }
+
+.flightIndex{
+    border: 2px solid red; 
+}
+
+.flightIndex p{
+    line-height: 10px;
+}
+
+.flightIndex ul{
+    border: 2px solid red;
+    display: inline-block;
+    padding:5px;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.sectionTitle{
+    text-decoration: underline;
+    margin: 0px 0px 10px 0px;
+}
+
+
+.error-message{
+    font-size: 10px;
+    color: red;
+    border: 1px solid red;
+}
