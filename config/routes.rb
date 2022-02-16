@@ -15,3 +15,5 @@ resources :airplanes
 
 # AXIOS flight search form
 get '/search' => 'flights#search'
+
+end
