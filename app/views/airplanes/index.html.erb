@@ -25,10 +25,14 @@
       </div>
     <% end %>
   </div>
-  <div>
+  <div class="plane-details-container">
     <p>Plane Details</p>
-    <p class="plane-details">Rows</p>
-    <%= plane.total_rows %>
+    <p class="plane-details">Rows: <%= plane.total_rows %></p>
+    
+    <p class="plane-details">Columns: <%= plane.total_columns %></p>
+    
+    <p class="plane-details">Total Seats: <%= plane.total_columns * plane.total_rows %></p>
+    
   </div>
 
 </div>
