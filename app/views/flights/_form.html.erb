@@ -11,24 +11,31 @@
 
 
     <%= form_with model: @flight, local: true do |f| %>
-        <%= f.label :origin %>
         
-        <%= f.text_field :origin %>
+        <div class="flight-input-container">
+            <%= f.label :origin %>
+            
+            <%= f.text_field :origin %>
+        </div>
+            
+        <div class="flight-input-container">
+            <%= f.label :destination %>
         
-        <%= f.label :destination %>
-       
-        <%= f.text_field :destination %>
+            <%= f.text_field :destination %>
+        </div>
         
-        <%= f.label :date %>
+        <div class="flight-input-container">
+            <%= f.label :date %>
+            
+            <%= f.date_field :date %>
+        </div>
+            
+        <div class="flight-input-container">
+            <%= f.label :airplane_id %>
         
-        <%= f.date_field :date %>
-        
-        <%= f.label :airplane_id %>
-       
-        <%= f.collection_select :airplane_id, Airplane.all, :id, :name %>
-      
+            <%= f.collection_select :airplane_id, Airplane.all, :id, :name ,{class:"input"}%>
+        </div>
 
-        
-        <%= f.submit %>
+        <%= f.submit class:"button" %>
     <% end %>
 </div>
