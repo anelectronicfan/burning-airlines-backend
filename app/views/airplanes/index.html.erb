@@ -9,6 +9,15 @@
 <%@airplanes.each do |plane|%>
 <div class="plane-container">
   <h2><%= plane.name %></h2>
+ <div class="plane-details-container">
+    <p class="sectionTitle">Plane Details</p>
+    <p class="plane-details">Rows: <%= plane.total_rows %></p>
+    <p class="plane-details">Columns: <%= plane.total_columns %></p>
+    <p class="plane-details">Total Seats: <%= plane.total_columns * plane.total_rows %></p>
+    <p class="plane-details">Date Created: <%= (plane.created_at).strftime("%Y-%m-%d")%></p>
+    
+  </div>
+
   <div class="plane-seating-container">
   
     <% Array.new(plane.total_rows).each_with_index do |row, i|%>
@@ -25,15 +34,7 @@
       </div>
     <% end %>
   </div>
-  <div class="plane-details-container">
-    <p>Plane Details</p>
-    <p class="plane-details">Rows: <%= plane.total_rows %></p>
-    
-    <p class="plane-details">Columns: <%= plane.total_columns %></p>
-    
-    <p class="plane-details">Total Seats: <%= plane.total_columns * plane.total_rows %></p>
-    
-  </div>
+ 
 
 </div>
 <% end %>

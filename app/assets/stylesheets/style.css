@@ -101,7 +101,7 @@ form{
 }
 .plane-details-container{
     background-color: red;
-    display: block;
+    display: table-cell;
     text-align: left;
     padding:10px;
 }

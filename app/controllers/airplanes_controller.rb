@@ -20,6 +20,7 @@ class AirplanesController < ApplicationController
     def index
         @airplane = Airplane.new
         @airplanes = Airplane.order(:date).reverse
+    
     end
 
     def show
