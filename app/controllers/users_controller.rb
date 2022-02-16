@@ -9,6 +9,13 @@ class UsersController < ApplicationController
     end
 
     def show
+        user = User.find params[:id]
+        reservations= user.reservations
+
+        reservations_data ={
+            
+        }
+        render json: reservations
     end
 
     def edit
@@ -19,5 +26,12 @@ class UsersController < ApplicationController
 
     def destroy
     end
+
+    private
+
+    def user_params
+
+    end
+
     
 end
