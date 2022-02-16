@@ -1,0 +1,27 @@
+<%= render partial: 'form' %>
+
+
+<h1>Airplane Index</h1>
+
+<%@airplanes.each do |plane|%>
+<div class="plane-container">
+  <h2><%= plane.name %></h2>
+  <div class="plane-seating-container">
+  
+    <% Array.new(plane.total_rows).each_with_index do |row, i|%>
+      <div class="plane-seating-row">
+        
+        <% Array.new(plane.total_columns, i).each_with_index do |col, j|%>
+          
+          <div class="plane-seating-seat">
+          <%= i+1 %>
+          <%= (j+65).chr %>
+          </div>
+          
+        <% end%>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+<% end %>
