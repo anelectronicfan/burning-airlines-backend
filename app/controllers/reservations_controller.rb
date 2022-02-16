@@ -20,10 +20,12 @@ class ReservationsController < ApplicationController
     end
 
     def index
-        
+       reservations = Reservation.all
+        render json: reservations 
     end
 
     def show
+        
     end
 
     def edit
