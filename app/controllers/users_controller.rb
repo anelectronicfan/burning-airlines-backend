@@ -11,11 +11,9 @@ class UsersController < ApplicationController
     def show
         user = User.find params[:id]
         reservations= user.reservations
-
-        reservations_data ={
-            
-        }
-        render json: reservations
+        name = user.name
+       
+        render json: => reservations, :include => {:id, :}
     end
 
     def edit
