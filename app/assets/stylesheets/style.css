@@ -12,14 +12,20 @@
     margin: 0 auto;
 }
 
-.form_div input{
-    display:block;
-    margin: 0px 0px 10px 0px;
+.form-input-container{
+    border: 2px solid red;
+    display:inline-block
 }
 
-.input{
-    height: 50px;
+.form_div label{
+    display:block;
+    margin: 10px 0px 0px 0px;
 }
+
+.input-box{
+    height: 20px;
+}
+
 
 .plane-seating-container{
     font-size: 0.5rem;
@@ -75,10 +81,7 @@ form{
     background-color: red;
     padding:20px;
 }
-.flight-input-container{
-    border: 2px solid red;
-    display:inline-block
-}
+
 
 .sectionTitle{
     text-decoration: underline;
