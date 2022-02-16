@@ -35,10 +35,10 @@ class FlightsController < ApplicationController
         @flights =  Flight.all.reverse
 
         @flight.save
-        if @flight.persisted?
+        if @flight.persisted? # If changes are saved correctly update the flight index
             redirect_to flights_path
         else
-            render :index
+            render :index # render the index showing the error messages
         end
     end
 
