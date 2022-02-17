@@ -1,23 +1,7 @@
-class ApplicationController < ActionController::Base
-    def new
-    end
+class ApplicationController < ActionController::API
+    skip_before_action :verify_authenticity_token
+    include Knock::Authenticable
 
-    def create
-    end
-
-    def index
-    end
-
-    def show
-    end
-
-    def edit
-    end
-
-    def update
-    end
-
-    def destroy
-    end
+    
     
 end
