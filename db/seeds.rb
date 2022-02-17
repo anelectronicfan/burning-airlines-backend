@@ -5,17 +5,28 @@ print "creating user"
 u1 = User.create(
     name: 'Angela', 
     email: 'angela@ga.co', 
-    password: 'chicken'
+    password: 'chicken',
+    password_confirmation: 'chicken',
+    admin: 'true'
 )
 u2 = User.create(
     name: 'Dan', 
     email: 'dan@ga.co', 
-    password: 'chicken'
+    password_confirmation: 'chicken',
+    admin: 'true'
 )
 u3 = User.create(
     name: 'Ethan', 
     email: 'ethan@ga.co', 
-    password: 'chicken'
+    password: 'chicken',
+    password_confirmation: 'chicken',
+    admin: 'true'
+)
+u4 = User.create(
+    name: 'Test',
+    email: 'test@ga.co',
+    password: 'chicken',
+    password_confirmation: 'chicken',
 )
 
 puts " created #{User.count} users"
