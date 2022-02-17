@@ -50,6 +50,30 @@ class FlightsController < ApplicationController
         @flights =  Flight.all.reverse
     end
 
+    def adminIndex
+        flights = Flight.all.reverse.map {|flight|
+        
+        updated_flight = flight.attributes #this makes a hash copy of the Flight so we can add to it
+        
+        #grab the reservations and plane for the flight
+        reservations = Reservation.where(flight_id: flight.id)
+        plane = Airplane.find_by(id: flight.airplane_id)
+        #calculate the remaining seats
+        total_seats = plane.total_rows * plane.total_columns
+        remaining_seats = total_seats - reservations.length
+
+        #add the remaining seats and the name of the plane to the hash
+        updated_flight[:remaining_seats] = remaining_seats
+        updated_flight[:plane_name] = plane.name
+        
+        #return the hash to add into the flights array
+        updated_flight
+        }
+
+
+        render json: flights
+    end
+
     def show
         # Grab the flight that matches params[:id]
         flight =  Flight.find params[:id]
