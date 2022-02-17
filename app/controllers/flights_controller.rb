@@ -50,6 +50,11 @@ class FlightsController < ApplicationController
         @flights =  Flight.all.reverse
     end
 
+    def adminIndex
+        flights =  Flight.all.reverse
+        render json: flights
+    end
+
     def show
         # Grab the flight that matches params[:id]
         flight =  Flight.find params[:id]

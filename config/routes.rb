@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   resources :reservations
 
+  get '/admin/flights' => 'flights#adminIndex'
   resources :flights
   get '/flights/:id/delete' => 'flights#destroy',as: 'destroy_flight'
-
   resources :airplanes
 
   # AXIOS flight search form
