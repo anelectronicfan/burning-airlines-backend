@@ -1,5 +1,15 @@
 class AirplanesController < ApplicationController
 
+    def react_index
+        render json: Airplane.order(:date).reverse
+    end
+
+    def react_create
+        
+        
+    end
+
+    
     def new
         @airplane = Airplane.new
     end
