@@ -6,13 +6,12 @@ u1 = User.create(
     name: 'Angela', 
     email: 'angela@ga.co', 
     password: 'chicken',
-    password_confirmation: 'chicken',
     admin: 'true'
 )
 u2 = User.create(
     name: 'Dan', 
     email: 'dan@ga.co', 
-    password_confirmation: 'chicken',
+    password: 'chicken',
     admin: 'true'
 )
 u3 = User.create(
@@ -25,8 +24,8 @@ u3 = User.create(
 u4 = User.create(
     name: 'Test',
     email: 'test@ga.co',
-    password: 'chicken',
-    password_confirmation: 'chicken',
+    password: 'chicken'
+    
 )
 
 puts " created #{User.count} users"

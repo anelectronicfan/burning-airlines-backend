@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   scope '/api' do
+    # Get the login token from knock
     post 'user_token' => 'user_token#create'
-    resources :users
+
+    # User routes
+    get '/users/current' => 'users#current'
 
     resources :reservations
 
