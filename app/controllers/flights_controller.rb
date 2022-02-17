@@ -65,13 +65,14 @@ class FlightsController < ApplicationController
         #add the remaining seats and the name of the plane to the hash
         updated_flight[:remaining_seats] = remaining_seats
         updated_flight[:plane_name] = plane.name
-        
+       
+        # updated_flight[:all_planes] = Plane.all
         #return the hash to add into the flights array
         updated_flight
         }
 
 
-        render json: flights
+        render json: flights 
     end
 
     def show
